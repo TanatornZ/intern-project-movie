@@ -11,6 +11,12 @@ function MovieList() {
         <MovieCom />
         <MovieCom />
         <MovieCom />
+        <MovieCom />
+        <MovieCom />
+        <MovieCom />
+        <MovieCom />
+        <MovieCom />
+        <MovieCom />
       </div>
     </div>
   )

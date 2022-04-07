@@ -9,14 +9,10 @@ import MovieDetail from "./Pages/MovieDetail";
 
 function App() {
 
-  const [opacity , setOpacity] = useState<boolean>(false) ;
-
-
-
   return (
-    <div className="max-w-[100vw] min-h-[100vh] h-full bg-[#C4C4C4] ">
+    <div className="max-w-[100vw] min-h-[100vh] h-full bg-[#f3f3f3] ">
       <Navbar />
-      <div className='flex justify-center mx-[120px] py-12'>
+      <div className='flex justify-center mx-[120px] py-32'>
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/movielist" element={<MovieList />} />

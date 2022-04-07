@@ -26,11 +26,11 @@ function Login() {
 
   return (
     <div className="w-[480px] flex flex-col items-center  py-12 rounded mx-auto mt-[148px] bg-white drop-shadow-2xl ">
-      <h1 className="text-4xl text-[#FF7A6A]">Login</h1>
+      <h1 className="text-4xl text-[#333] font-bold">Login</h1>
       <form className="mt-12 flex flex-col items-center">
         <input
           type="text"
-          className="form-control border outline-[#FF7A6A] p-3 block "
+          className="form-control border outline-[#2b279c] p-3 block "
           placeholder="Username"
           name="username"
           value={userName}
@@ -39,7 +39,7 @@ function Login() {
 
         {error && <p className="text-red-700 mt-3">{error}</p>}
         <button
-          className="border rounded drop-shadow-md block w-24 p-2 text-white mt-5 bg-[#FE8065]"
+          className="border rounded drop-shadow-md block w-24 p-3 text-white text-xl mt-5 bg-gradient-to-r from-[#020024] via-[#090979] to-[#198399]"
           onClick={login}
         >
           submit
