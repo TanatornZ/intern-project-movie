@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Navbar from "./components/Navbar";
@@ -8,8 +8,13 @@ import MovieList from "./Pages/MovieList";
 import MovieDetail from "./Pages/MovieDetail";
 
 function App() {
+
+  const [opacity , setOpacity] = useState<boolean>(false) ;
+
+
+
   return (
-    <div className="max-w-[100vw] min-h-[100vh] h-full bg-[#C4C4C4]">
+    <div className="max-w-[100vw] min-h-[100vh] h-full bg-[#C4C4C4] ">
       <Navbar />
       <div className='flex justify-center mx-[120px] py-12'>
         <Routes>
