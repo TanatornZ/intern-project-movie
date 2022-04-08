@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { GiPopcorn } from "react-icons/gi";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 function Navbar() {
   const userName: string = "John";
+
+  const location = useLocation();
+
+  const [checkLogin , setCheckLogin] = useState<boolean>(true);
+
+  useEffect(() => {
+
+    if (location.pathname == '/') {
+        setCheckLogin(false);
+    }
+
+  },[])
 
   return (
     <div className="flex items-center justify-between px-10 py-4 bg-gradient-to-r from-[#020024] via-[#090979] to-[#198399] w-screen fixed z-10">
@@ -12,7 +24,7 @@ function Navbar() {
         <Link to="/"><p className="text-white">Top 10 IMDB moives</p></Link>
         
       </div>
-      <p className="text-white">hi , {userName} </p>
+      {checkLogin && <p className="text-white">hi , {userName} </p> }
     </div>
   );
 }

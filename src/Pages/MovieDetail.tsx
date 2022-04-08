@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { AiFillStar } from "react-icons/ai";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { ImCross } from "react-icons/im";
 import { AiFillLeftCircle, AiFillRightCircle } from "react-icons/ai";
 import MovieModal from "../components/MovieModal";
 
 function MovieDetail() {
   let navigate = useNavigate();
+
+  const location = useLocation();
 
   const [showModal, setShowModal] = useState<boolean>(false);
 
@@ -27,9 +29,16 @@ function MovieDetail() {
         />
         <AiFillLeftCircle className="absolute left-10 top-2/4 text-6xl z-10 cursor-pointer	" />
         <img
-          className="w-[200px] h-[280px] my-4 border-4 border-[#FEFEFE] drop-shadow-lg"
+          className="w-[200px]  h-[280px] my-4 border-4 border-[#FEFEFE] drop-shadow-lg"
           src="https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg"
         />
+
+        <div className="flex items-center justify-center ml-3 z-10 absolute w-14 h-6 m-5 bg-[#252525] drop-shadow-xl  border border-[#FFDA44]   rounded">
+          <AiFillStar className="mr-1 fill-[#FFDA44]" />{" "}
+          <p>
+            <span className="text-[#FFDA44]">9.3 </span>
+          </p>
+        </div>
         <AiFillRightCircle className="absolute right-10 top-2/4 text-6xl z-10 cursor-pointer	" />
         <p className="text-[rgb(3,3,3)] z-10 text-2xl font-bold">
           Deadpool (2016) เดดพูล นักสู้พันธุ์เกรียน
@@ -63,13 +72,13 @@ function MovieDetail() {
 
         <div className="flex justify-center mt-5">
           <button
-            className="bg-gradient-to-r from-[#020024] via-[#090979] to-[#198399] w-[150px] p-3 rounded mr-5 text-white"
+            className=" drop-shadow-xl bg-gradient-to-r from-[#020024] via-[#090979] to-[#198399] w-[150px] p-3 rounded mr-5 text-white"
             onClick={clickShow}
           >
             View Detail
           </button>
           <button
-            className="w-[150px] bg-[#C3C3C3] p-3 rounded text-white"
+            className=" drop-shadow-xl w-[150px] bg-[#C3C3C3] p-3 rounded text-white"
             onClick={handleBack}
           >
             Back
@@ -80,7 +89,7 @@ function MovieDetail() {
       <div
         className={`${
           showModal ? "" : "hidden"
-        } absolute z-10 top-10 left-20 right-20`}
+        } absolute z-10 top-10 left-20 right-20 `}
       >
         {/* <MovieModal closeModal={setShowModal} /> */}
         <MovieModal closeShowModal={setShowModal} isShowModal={showModal}>
