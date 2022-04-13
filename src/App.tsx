@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import Navbar from "./components/Navbar";
+import Navbar from "./Components/Navbar";
 import { Route, Routes } from "react-router-dom";
 import Login from "./Pages/Login";
 import MovieList from "./Pages/MovieList";

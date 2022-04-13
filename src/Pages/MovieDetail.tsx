@@ -3,7 +3,7 @@ import { AiFillStar } from "react-icons/ai";
 import { useLocation, useNavigate } from "react-router-dom";
 import { ImCross } from "react-icons/im";
 import { AiFillLeftCircle, AiFillRightCircle } from "react-icons/ai";
-import MovieModal from "../components/MovieModal";
+import MovieModal from "../Components/Modal/MovieModal";
 
 function MovieDetail() {
   let navigate = useNavigate();
