@@ -41,7 +41,7 @@ function MovieDetail() {
         </div>
         <AiFillRightCircle className="absolute right-10 top-2/4 text-6xl z-10 cursor-pointer	" />
         <p className="text-[rgb(3,3,3)] z-10 text-2xl font-bold">
-          Deadpool (2016) เดดพูล นักสู้พันธุ์เกรียน
+          Deadpool (2016) 
         </p>
         <p className="z-10 py-4 text-xl font-medium">2016</p>
 
@@ -86,25 +86,7 @@ function MovieDetail() {
         </div>
       </div>
 
-      <div
-        className={`${
-          showModal ? "" : "hidden"
-        } absolute z-10 top-10 left-20 right-20 `}
-      >
-        {/* <MovieModal closeModal={setShowModal} /> */}
-        <MovieModal closeShowModal={setShowModal} isShowModal={showModal}>
-          <div className="drop-shadow-2xl bg-white  rounded py-5 px-10 ">
-            <p className="text-[#333] text-xl font-bold mb-2">Detail</p>
-
-            <p>
-              Ajax, a twisted scientist, experiments on Wade Wilson, a
-              mercenary, to cure him of cancer and give him healing powers.
-              However, the experiment leaves Wade disfigured and he decides to
-              exact revenge.
-            </p>
-          </div>
-        </MovieModal>
-      </div>
+      <MovieModal  closeShowModal={setShowModal} isShowModal={showModal}/>
     </div>
   );
 }
