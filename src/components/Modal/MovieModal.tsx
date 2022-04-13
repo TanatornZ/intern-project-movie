@@ -1,26 +1,50 @@
 import React, { Dispatch, FC, MouseEvent, SetStateAction } from "react";
 import { ImCross } from "react-icons/im";
 import ReactDOM from "react-dom";
+import Modal from "react-modal";
+
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+  },
+};
+
+Modal.setAppElement("#root");
 
 interface Props {
   closeShowModal: Dispatch<SetStateAction<boolean>>;
   isShowModal: boolean;
 }
 
-const MovieModal: FC<Props> = ({ closeShowModal, isShowModal, children }) => {
-  const handleClose = (event: MouseEvent<HTMLDivElement>) => {
+const MovieModal: FC<Props> = ({ closeShowModal, isShowModal }) => {
+  const closeModal = () => {
     closeShowModal(false);
   };
 
-  if (!isShowModal) {
-    return null;
-  }
+ 
+  return (
+    <div className="drop-shadow-2xl w-80">
+      <Modal
+        isOpen={isShowModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+      >
+        <div className=" rounded py-5 px-10 w-[600px]">
+          <p className="text-[#333] text-xl font-bold mb-2">Detail</p>
 
-  return ReactDOM.createPortal(
-    <div className="w-screen h-screen flex justify-center items-center fixed top-0 bg-[rgba(0,0,0,0.5)]" onClick={handleClose}>
-      <div className='w-2/4' onClick={e => e.stopPropagation()}>{children}</div>
-    </div>,
-    document.getElementById("modal-root")!
+          <p>
+            Ajax, a twisted scientist, experiments on Wade Wilson, a mercenary,
+            to cure him of cancer and give him healing powers. However, the
+            experiment leaves Wade disfigured and he decides to exact revenge.
+          </p>
+        </div>
+      </Modal>
+    </div>
   );
 };
 

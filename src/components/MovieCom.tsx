@@ -1,7 +1,11 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { AiFillStar } from "react-icons/ai";
 import { Link } from "react-router-dom";
 function MovieCom() {
+
+   const { t , i18n } = useTranslation();
+
   return (
     <Link to="/moviedetail">
       <div className="w-[280px] h-[380px] drop-shadow-lg bg-[#FEFEFE] rounded-2xl relative overflow-hidden flex flex-col  ">
@@ -16,7 +20,7 @@ function MovieCom() {
           </p>
         </div>
         <div className="z-10 w-full bottom-0 fixed text-center flex flex-col p-4 bg-[rgba(20,20,20,0.5)] hover:bg-[rgba(25,25,25,1)]">
-          <p className="text-[rgb(245,245,247)] text-xl font-medium">Deadpool (2016) เดดพูล นักสู้พันธุ์เกรียน</p>
+          <p className="text-[rgb(245,245,247)] text-xl font-medium">{t('Movie Name')} (2016)</p>
           
         </div>
       </div>

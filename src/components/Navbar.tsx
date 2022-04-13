@@ -8,6 +8,14 @@ function Navbar() {
 
   const [checkLogin , setCheckLogin] = useState<boolean>(true);
 
+  const [language , setLanguage] = useState<string>('th')
+
+  const handleLanguage = (language: string) => {
+    setLanguage(language);
+  }
+
+  
+
   useEffect(() => {
 
     if (location.pathname == '/') {
@@ -24,7 +32,10 @@ function Navbar() {
         <Link to="/"><p className="text-white">Top 10 IMDB moives</p></Link>
         
       </div>
-      {checkLogin && <p className="text-white">hi , {userName} </p> }
+      <div className='flex items-center text-white '>
+        <p className={`mr-2 ${language === 'th' ? 'text-xl' :''}`} onClick={()=> handleLanguage('th')}>TH</p> |
+        <p className={`ml-2 ${language === 'en' ? 'text-xl' :''}`} onClick={()=> handleLanguage('en')}>EN</p>
+      </div>
     </div>
   );
 }

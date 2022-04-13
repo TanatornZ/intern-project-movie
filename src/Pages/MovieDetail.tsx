@@ -4,9 +4,14 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { ImCross } from "react-icons/im";
 import { AiFillLeftCircle, AiFillRightCircle } from "react-icons/ai";
 import MovieModal from "../Components/Modal/MovieModal";
+import { useTranslation } from "react-i18next";
 
 function MovieDetail() {
+
+  const {t} = useTranslation('translation' , {keyPrefix : 'component'})
+
   let navigate = useNavigate();
+
 
   const location = useLocation();
 
@@ -22,7 +27,7 @@ function MovieDetail() {
 
   return (
     <div className="w-3/4 rounded-lg overflow-hidden drop-shadow-2xl relative">
-      <div className="bg-[#F7F7F7] flex flex-col items-center border-b-2 relative">
+      <div className="bg-[#F7F7F7] flex flex-col items-center border-b-2 relative ">
         <img
           src="https://img1.hulu.com/user/v3/artwork/e27cac54-3c3c-425e-b7de-67edc2c9f496?base_image_bucket_name=image_manager&base_image=c508266a-667a-4ef8-b770-bfcaaf6d4fd5&region=US&format=jpeg&size=952x536"
           className="absolute w-full h-full opacity-25 object-cover"
@@ -40,10 +45,9 @@ function MovieDetail() {
           </p>
         </div>
         <AiFillRightCircle className="absolute right-10 top-2/4 text-6xl z-10 cursor-pointer	" />
-        <p className="text-[rgb(3,3,3)] z-10 text-2xl font-bold">
+        <p className="text-[rgb(3,3,3)] z-10 text-2xl font-bold mb-3">
           Deadpool (2016) 
         </p>
-        <p className="z-10 py-4 text-xl font-medium">2016</p>
 
         {/* <div className="flex items-center z-10 p-3">
           <AiFillStar className="mr-1 fill-[#FFDA44]" />{" "}
@@ -54,19 +58,19 @@ function MovieDetail() {
       </div>
       <div className="bg-[#FFFFFF] px-12 py-10">
         <div className="">
-          <p className="text-[#333] text-xl font-bold">Released on</p>{" "}
+          <p className="text-[#333] text-xl font-bold">{t('Release date')}</p>{" "}
           <p className="italic">1972</p>
         </div>
         <div className="mt-2">
-          <p className="text-[#333] text-xl font-bold">Director</p>{" "}
+          <p className="text-[#333] text-xl font-bold">{t('Release date')}</p>{" "}
           <p className="italic">Francis Ford Coppola</p>
         </div>
         <div className="mt-2">
-          <p className="text-[#333] text-xl font-bold">Stars</p>{" "}
+          <p className="text-[#333] text-xl font-bold">{t('Release date')}</p>{" "}
           <p className="italic">Al Pacino , Marlon Brando , Robert De Niro</p>
         </div>
         <div className="mt-2">
-          <p className="text-[#333] text-xl font-bold">Reviewers</p>{" "}
+          <p className="text-[#333] text-xl font-bold">{t('reviewers')}</p>{" "}
           <p className="italic">6,666 users</p>
         </div>
 
