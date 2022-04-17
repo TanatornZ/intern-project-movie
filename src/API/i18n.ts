@@ -3,25 +3,35 @@ import { initReactI18next } from "react-i18next";
 
 const resources = {
   en: {
-    translation: {
-      "Movie Name": "Deadpool",
-      component: {
-        "Release date": "Release date",
-        Director: "Director",
-        star: "star",
-        reviewers: "reviewers",
-      },
+    'translation': {
+      "movieName": "Deadpool",
+        'login' : 'login',
+        'signIn' : 'sign in',
+        'userName' : 'user name',
+        "releaseDate": "Release date",
+        'director': "Director",
+        'star': "star",
+        'reviewers': "reviewers",
+        'detail' : 'detail',
+        'article' : 'Ajax, a twisted scientist, experiments on Wade Wilson, a mercenaryto cure him of cancer and give him healing powers. However, the experiment leaves Wade disfigured and he decides to exact revenge.',
+        'viewDetail' : 'view detail',
+        'back' : 'back'
     },
   },
   th: {
-    translation: {
-      "Movie Name": "เดดพูล",
-      component: {
-        "Release date": "เข้าฉาย",
-        Director: "ผู้กำกับ",
-        star: "นักแสดงนำ",
-        reviewers: "ผู้รีวิว",
-      },
+    'translation': {
+      "movieName": "เดดพูล",
+      'login' : 'ลงชื่อเข้าใช้',
+        'signIn' : 'เข้าสู่ระบบ',
+        'userName' : 'บัญชีผู้ใช้',
+        "releaseDate": "เข้าฉาย",
+        'director': "ผู้กำกับ",
+        'star': "นักแสดงนำ",
+        'reviewers': "ผู้รีวิว",
+        'article' : 'เดดพูล เป็นภาพยนตร์ซูเปอร์ฮีโรอเมริกัน เกี่ยวกับตัวละครในเครือมาร์เวลคอมิกส์ในชื่อเดียวกัน เดดพูล เป็นภาพยนตร์ลำดับที่แปดในภาพยนตร์ชุด เอ็กซ์เมน ภาพยนตร์กำกับโดยทิม มิลเลอร์ เขียนบทโดยเรตต์ รีส และพอล เวอร์นิก และนำแสดงโดยไรอัน เรย์โนลส์ โมเรนา แบ็กคาริน เอ็ด สกรีน ที. เจ. ',
+        'detail' : 'รายละเอียด',
+      'viewDetail' : 'ดูรายละเอียด',
+        'back' : 'กลับ'
     },
   },
 };

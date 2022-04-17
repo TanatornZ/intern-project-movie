@@ -1,19 +1,17 @@
 import React, { useState } from "react";
 import { AiFillStar } from "react-icons/ai";
-import { useLocation, useNavigate } from "react-router-dom";
-import { ImCross } from "react-icons/im";
+import { NavigateFunction, useLocation, useNavigate } from "react-router-dom";
+
 import { AiFillLeftCircle, AiFillRightCircle } from "react-icons/ai";
 import MovieModal from "../Components/Modal/MovieModal";
 import { useTranslation } from "react-i18next";
 
 function MovieDetail() {
 
-  const {t} = useTranslation('translation' , {keyPrefix : 'component'})
+  const {t} = useTranslation('translation')
 
-  let navigate = useNavigate();
+  let navigate : NavigateFunction  = useNavigate();
 
-
-  const location = useLocation();
 
   const [showModal, setShowModal] = useState<boolean>(false);
 
@@ -34,59 +32,53 @@ function MovieDetail() {
         />
         <AiFillLeftCircle className="absolute left-10 top-2/4 text-6xl z-10 cursor-pointer	" />
         <img
-          className="w-[200px]  h-[280px] my-4 border-4 border-[#FEFEFE] drop-shadow-lg"
+          className="w-[200px]  h-[280px] my-4 border-4 border-white drop-shadow-lg"
           src="https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg"
         />
 
-        <div className="flex items-center justify-center ml-3 z-10 absolute w-14 h-6 m-5 bg-[#252525] drop-shadow-xl  border border-[#FFDA44]   rounded">
-          <AiFillStar className="mr-1 fill-[#FFDA44]" />{" "}
+        <div className="flex items-center justify-center ml-3 z-10 absolute w-14 h-6 m-5 bg-slate-800 drop-shadow-xl  border border-yellow-300   rounded">
+          <AiFillStar className="mr-1 fill-yellow-300" />{" "}
           <p>
-            <span className="text-[#FFDA44]">9.3 </span>
+            <span className="text-yellow-300">9.3 </span>
           </p>
         </div>
         <AiFillRightCircle className="absolute right-10 top-2/4 text-6xl z-10 cursor-pointer	" />
-        <p className="text-[rgb(3,3,3)] z-10 text-2xl font-bold mb-3">
-          Deadpool (2016) 
+        <p className="text-zinc-900 z-10 text-2xl font-bold mb-3">
+          {t('movieName')} (2016) 
         </p>
 
-        {/* <div className="flex items-center z-10 p-3">
-          <AiFillStar className="mr-1 fill-[#FFDA44]" />{" "}
-          <p>
-            <span className="text-[#FFDA44]">9.3 </span>/ 10
-          </p>
-        </div> */}
+       
       </div>
-      <div className="bg-[#FFFFFF] px-12 py-10">
+      <div className="bg-white px-12 py-10">
         <div className="">
-          <p className="text-[#333] text-xl font-bold">{t('Release date')}</p>{" "}
+          <p className="text-slate-800 text-xl font-bold">{t('releaseDate')}</p>{" "}
           <p className="italic">1972</p>
         </div>
         <div className="mt-2">
-          <p className="text-[#333] text-xl font-bold">{t('Release date')}</p>{" "}
+          <p className="text-slate-800 text-xl font-bold">{t('director')}</p>{" "}
           <p className="italic">Francis Ford Coppola</p>
         </div>
         <div className="mt-2">
-          <p className="text-[#333] text-xl font-bold">{t('Release date')}</p>{" "}
+          <p className="text-slate-800 text-xl font-bold">{t('star')}</p>{" "}
           <p className="italic">Al Pacino , Marlon Brando , Robert De Niro</p>
         </div>
         <div className="mt-2">
-          <p className="text-[#333] text-xl font-bold">{t('reviewers')}</p>{" "}
+          <p className="text-slate-800 text-xl font-bold">{t('reviewers')}</p>{" "}
           <p className="italic">6,666 users</p>
         </div>
 
         <div className="flex justify-center mt-5">
           <button
-            className=" drop-shadow-xl bg-gradient-to-r from-[#020024] via-[#090979] to-[#198399] w-[150px] p-3 rounded mr-5 text-white"
+            className=" drop-shadow-xl bg-gradient-to-r from-zinc-900 via-blue-800 to-cyan-700 w-9xl p-3 rounded mr-5 text-white"
             onClick={clickShow}
           >
-            View Detail
+            {t('viewDetail')}
           </button>
           <button
-            className=" drop-shadow-xl w-[150px] bg-[#C3C3C3] p-3 rounded text-white"
+            className=" drop-shadow-xl w-9xl bg-slate-700 p-3 rounded text-white"
             onClick={handleBack}
           >
-            Back
-          </button>
+            {t('back')}          </button>
         </div>
       </div>
 
