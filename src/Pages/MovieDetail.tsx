@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 
 function MovieDetail(): JSX.Element {
 
-  const {t} = useTranslation('translation')
+  const {t} = useTranslation()
 
   let navigate : NavigateFunction  = useNavigate();
 

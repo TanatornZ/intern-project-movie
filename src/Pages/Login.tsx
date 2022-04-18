@@ -8,7 +8,7 @@ function Login() {
   const [userName, setUserName] = useState<string>("");
   const [error, setError] = useState<string>('');
 
-  const {t} = useTranslation('translation')
+  const {t} = useTranslation()
 
   const login = (event: MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();

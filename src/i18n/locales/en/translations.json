@@ -1,0 +1,14 @@
+{
+    "movieName": "Deadpool",
+      "login" : "login",
+      "signIn" : "sign in",
+      "userName" : "username",
+      "releaseDate": "Release date",
+      "director": "Director",
+      "star": "star",
+      "reviewers": "reviewers",
+      "detail" : "detail",
+      "article" : "Ajax, a twisted scientist, experiments on Wade Wilson, a mercenaryto cure him of cancer and give him healing powers. However, the experiment leaves Wade disfigured and he decides to exact revenge.",
+      "viewDetail" : "view detail",
+      "back" : "back"
+}

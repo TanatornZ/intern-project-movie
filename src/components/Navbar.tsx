@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { GiPopcorn } from "react-icons/gi";
 import { Link, Location, useLocation } from "react-router-dom";
 import { JsxElement } from "typescript";
-import i18n from "../API/i18n";
+import i18n from "../i18n/i18n";
 
 function Navbar(): JSX.Element {
-  const userName: string = "John";
+  
 
   const location: Location = useLocation();
 
