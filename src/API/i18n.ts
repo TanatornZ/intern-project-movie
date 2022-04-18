@@ -23,7 +23,7 @@ const resources = {
       "movieName": "เดดพูล",
       'login' : 'ลงชื่อเข้าใช้',
         'signIn' : 'เข้าสู่ระบบ',
-        'userName' : 'บัญชีผู้ใช้',
+        'userName' : 'ชื่อบัญชีผู้ใช้',
         "releaseDate": "เข้าฉาย",
         'director': "ผู้กำกับ",
         'star': "นักแสดงนำ",

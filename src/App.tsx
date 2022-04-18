@@ -10,9 +10,9 @@ import MovieDetail from "./Pages/MovieDetail";
 function App() {
 
   return (
-    <div className="max-w-[100vw] min-h-[100vh] h-full bg-[#f3f3f3] ">
+    <div className="max-w-screen min-h-screen h-full bg-white ">
       <Navbar />
-      <div className='flex justify-center mx-[120px] py-32'>
+      <div className='flex justify-center mx-32 py-32'>
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/movielist" element={<MovieList />} />

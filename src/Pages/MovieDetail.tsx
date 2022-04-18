@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , MouseEvent} from "react";
 import { AiFillStar } from "react-icons/ai";
 import { NavigateFunction, useLocation, useNavigate } from "react-router-dom";
 
@@ -15,11 +15,11 @@ function MovieDetail() {
 
   const [showModal, setShowModal] = useState<boolean>(false);
 
-  const clickShow = () => {
+  const clickShow = (event: MouseEvent<HTMLButtonElement>) => {
     setShowModal(!showModal);
   };
 
-  const handleBack = () => {
+  const handleBack = (event: MouseEvent<HTMLButtonElement>) => {
     navigate(-1);
   };
 
