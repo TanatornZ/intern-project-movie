@@ -1,9 +1,9 @@
 import React, { ChangeEvent, MouseEvent, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, NavigateFunction, useNavigate } from "react-router-dom";
 
 function Login() {
-  let navigate = useNavigate();
+  let navigate: NavigateFunction = useNavigate();
 
   const [userName, setUserName] = useState<string>("");
   const [error, setError] = useState<string>('');

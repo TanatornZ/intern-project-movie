@@ -7,7 +7,7 @@ const resources = {
       "movieName": "Deadpool",
         'login' : 'login',
         'signIn' : 'sign in',
-        'userName' : 'user name',
+        'userName' : 'username',
         "releaseDate": "Release date",
         'director': "Director",
         'star': "star",

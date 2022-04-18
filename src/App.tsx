@@ -7,7 +7,7 @@ import Login from "./Pages/Login";
 import MovieList from "./Pages/MovieList";
 import MovieDetail from "./Pages/MovieDetail";
 
-function App() {
+function App(): JSX.Element {
 
   return (
     <div className="max-w-screen min-h-screen h-full bg-white ">

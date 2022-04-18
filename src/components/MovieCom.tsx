@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import { useTranslation } from "react-i18next";
 import { AiFillStar } from "react-icons/ai";
 import { Link } from "react-router-dom";
+
 function MovieCom():JSX.Element{
 
    const { t } = useTranslation();

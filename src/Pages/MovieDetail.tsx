@@ -6,7 +6,7 @@ import { AiFillLeftCircle, AiFillRightCircle } from "react-icons/ai";
 import MovieModal from "../Components/Modal/MovieModal";
 import { useTranslation } from "react-i18next";
 
-function MovieDetail() {
+function MovieDetail(): JSX.Element {
 
   const {t} = useTranslation('translation')
 
