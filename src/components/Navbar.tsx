@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { GiPopcorn } from "react-icons/gi";
 import { Link, Location, useLocation } from "react-router-dom";
-import { JsxElement } from "typescript";
 import i18n from "../i18n/i18n";
 
 function Navbar(): JSX.Element {
@@ -19,7 +17,7 @@ function Navbar(): JSX.Element {
   };
 
   useEffect(() => {
-    if (location.pathname == "/") {
+    if (location.pathname === "/") {
       setCheckLogin(false);
     }
   }, []);
@@ -29,7 +27,7 @@ function Navbar(): JSX.Element {
       <div className="flex items-center ">
         <img
           src="https://www.pngplay.com/wp-content/uploads/2/Popcorn-Transparent-File.png"
-          className="w-15 h-10"
+          className="w-15 h-10" alt="item"
         />
         {/* <GiPopcorn className="fill-orange-700 mr-3" size="40" /> */}
         <Link to="/">
@@ -38,14 +36,14 @@ function Navbar(): JSX.Element {
       </div>
       <div className="flex items-center text-white ">
         <p
-          className={`mr-2 ${language === "th" ? "text-xl" : ""}`}
+          className={`mr-2 ${language === "th" ? "text-xl" : ""} cursor-pointer`}
           onClick={() => switchingLanguage("th")}
         >
           TH
         </p>{" "}
         |
         <p
-          className={`ml-2 ${language === "en" ? "text-xl" : ""}`}
+          className={`ml-2 ${language === "en" ? "text-xl" : ""} cursor-pointer`}
           onClick={() => switchingLanguage("en")}
         >
           EN

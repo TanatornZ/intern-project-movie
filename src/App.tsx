@@ -10,7 +10,7 @@ import MovieDetail from "./Pages/MovieDetail";
 function App(): JSX.Element {
 
   return (
-    <div className="max-w-screen min-h-screen h-full bg-white ">
+    <div className="max-w-screen min-h-screen h-full bg-slate-200 ">
       <Navbar />
       <div className='flex justify-center mx-32 py-32'>
         <Routes>
